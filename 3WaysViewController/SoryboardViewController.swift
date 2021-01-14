@@ -11,6 +11,7 @@ import UIKit
 class SoryboardViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var meButton: UIButton!
     
     var array = [
         1,
@@ -27,6 +28,13 @@ class SoryboardViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func pressedMeButton(_ sender: UIButton) {
+        
+        guard let lastValue = array.last else {return}
+        array.append(lastValue + 1)
+        
+        tableView.reloadData()
     }
     
     
@@ -47,4 +55,13 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }
