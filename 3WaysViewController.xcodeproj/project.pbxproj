@@ -13,6 +13,8 @@
 		596993BF25AFB36F004F2EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596993BD25AFB36F004F2EDC /* Main.storyboard */; };
 		596993C125AFB371004F2EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596993C025AFB371004F2EDC /* Assets.xcassets */; };
 		596993C425AFB371004F2EDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596993C225AFB371004F2EDC /* LaunchScreen.storyboard */; };
+		596993CC25AFB537004F2EDC /* SoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993CB25AFB537004F2EDC /* SoryboardViewController.swift */; };
+		596993CF25AFBE01004F2EDC /* SoryboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993CE25AFBE01004F2EDC /* SoryboardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		596993C025AFB371004F2EDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		596993C325AFB371004F2EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		596993C525AFB371004F2EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		596993CB25AFB537004F2EDC /* SoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoryboardViewController.swift; sourceTree = "<group>"; };
+		596993CE25AFBE01004F2EDC /* SoryboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoryboardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		596993B625AFB36F004F2EDC /* 3WaysViewController */ = {
 			isa = PBXGroup;
 			children = (
+				596993CD25AFBD7C004F2EDC /* Cells */,
 				596993B725AFB36F004F2EDC /* AppDelegate.swift */,
 				596993B925AFB36F004F2EDC /* SceneDelegate.swift */,
 				596993BB25AFB36F004F2EDC /* ViewController.swift */,
 				596993BD25AFB36F004F2EDC /* Main.storyboard */,
+				596993CB25AFB537004F2EDC /* SoryboardViewController.swift */,
 				596993C025AFB371004F2EDC /* Assets.xcassets */,
 				596993C225AFB371004F2EDC /* LaunchScreen.storyboard */,
 				596993C525AFB371004F2EDC /* Info.plist */,
 			);
 			path = 3WaysViewController;
+			sourceTree = "<group>";
+		};
+		596993CD25AFBD7C004F2EDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				596993CE25AFBE01004F2EDC /* SoryboardTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596993CF25AFBE01004F2EDC /* SoryboardTableViewCell.swift in Sources */,
+				596993CC25AFB537004F2EDC /* SoryboardViewController.swift in Sources */,
 				596993BC25AFB36F004F2EDC /* ViewController.swift in Sources */,
 				596993B825AFB36F004F2EDC /* AppDelegate.swift in Sources */,
 				596993BA25AFB36F004F2EDC /* SceneDelegate.swift in Sources */,
