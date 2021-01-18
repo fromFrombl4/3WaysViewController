@@ -8,15 +8,21 @@
 
 import UIKit
 
+protocol ViewControllerDelegate: AnyObject {
+    func changeLabel()
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
+    
+    weak var delegate: ViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.delegate?.changeLabel()
     }
-    
-    
+
     @IBAction func pressedStoryboardButton(_ sender: UIButton) {
         
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SoryboardViewController") as? SoryboardViewController else {
@@ -25,11 +31,10 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
 
 }
 
-extension ViewController: SoryboardTableViewCellDelegate {
+extension ViewController: SoryboardViewControllerDelegate {
     func changeLabel() {
         self.myLabel.text = UserDefaults.standard.string(forKey: "textField")
     }

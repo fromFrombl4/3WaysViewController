@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27FE045C3BB750AAF4A00BA5 /* Pods_3WaysViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27CC67E809DD5FD6A85EE44 /* Pods_3WaysViewController.framework */; };
 		596993B825AFB36F004F2EDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993B725AFB36F004F2EDC /* AppDelegate.swift */; };
 		596993BA25AFB36F004F2EDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993B925AFB36F004F2EDC /* SceneDelegate.swift */; };
 		596993BC25AFB36F004F2EDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993BB25AFB36F004F2EDC /* ViewController.swift */; };
@@ -15,6 +16,9 @@
 		596993C425AFB371004F2EDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596993C225AFB371004F2EDC /* LaunchScreen.storyboard */; };
 		596993CC25AFB537004F2EDC /* SoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993CB25AFB537004F2EDC /* SoryboardViewController.swift */; };
 		596993CF25AFBE01004F2EDC /* SoryboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993CE25AFBE01004F2EDC /* SoryboardTableViewCell.swift */; };
+		596993D125B4FAF4004F2EDC /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993D025B4FAF4004F2EDC /* Manager.swift */; };
+		596993D625B60BD5004F2EDC /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993D425B60BD5004F2EDC /* XibViewController.swift */; };
+		596993D725B60BD5004F2EDC /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596993D525B60BD5004F2EDC /* XibViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,12 @@
 		596993C525AFB371004F2EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		596993CB25AFB537004F2EDC /* SoryboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoryboardViewController.swift; sourceTree = "<group>"; };
 		596993CE25AFBE01004F2EDC /* SoryboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoryboardTableViewCell.swift; sourceTree = "<group>"; };
+		596993D025B4FAF4004F2EDC /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		596993D425B60BD5004F2EDC /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
+		596993D525B60BD5004F2EDC /* XibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibViewController.xib; sourceTree = "<group>"; };
+		891EDA3EEBF8A407492E2BA3 /* Pods-3WaysViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3WaysViewController.release.xcconfig"; path = "Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController.release.xcconfig"; sourceTree = "<group>"; };
+		CDC061124B00D11E5956E89E /* Pods-3WaysViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3WaysViewController.debug.xcconfig"; path = "Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		D27CC67E809DD5FD6A85EE44 /* Pods_3WaysViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3WaysViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FE045C3BB750AAF4A00BA5 /* Pods_3WaysViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +57,8 @@
 			children = (
 				596993B625AFB36F004F2EDC /* 3WaysViewController */,
 				596993B525AFB36F004F2EDC /* Products */,
+				EBEFE00F0254F555E2444E0B /* Pods */,
+				6EF7FC2BCFD9B15296849F49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +78,10 @@
 				596993B925AFB36F004F2EDC /* SceneDelegate.swift */,
 				596993BB25AFB36F004F2EDC /* ViewController.swift */,
 				596993BD25AFB36F004F2EDC /* Main.storyboard */,
+				596993D025B4FAF4004F2EDC /* Manager.swift */,
 				596993CB25AFB537004F2EDC /* SoryboardViewController.swift */,
+				596993D425B60BD5004F2EDC /* XibViewController.swift */,
+				596993D525B60BD5004F2EDC /* XibViewController.xib */,
 				596993C025AFB371004F2EDC /* Assets.xcassets */,
 				596993C225AFB371004F2EDC /* LaunchScreen.storyboard */,
 				596993C525AFB371004F2EDC /* Info.plist */,
@@ -81,6 +97,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		6EF7FC2BCFD9B15296849F49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D27CC67E809DD5FD6A85EE44 /* Pods_3WaysViewController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBEFE00F0254F555E2444E0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDC061124B00D11E5956E89E /* Pods-3WaysViewController.debug.xcconfig */,
+				891EDA3EEBF8A407492E2BA3 /* Pods-3WaysViewController.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 596993C825AFB371004F2EDC /* Build configuration list for PBXNativeTarget "3WaysViewController" */;
 			buildPhases = (
+				320F4BD9075D8A6FFD00341A /* [CP] Check Pods Manifest.lock */,
 				596993B025AFB36F004F2EDC /* Sources */,
 				596993B125AFB36F004F2EDC /* Frameworks */,
 				596993B225AFB36F004F2EDC /* Resources */,
+				24B3C137CA044A79FB11D8D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596993D725B60BD5004F2EDC /* XibViewController.xib in Resources */,
 				596993C425AFB371004F2EDC /* LaunchScreen.storyboard in Resources */,
 				596993C125AFB371004F2EDC /* Assets.xcassets in Resources */,
 				596993BF25AFB36F004F2EDC /* Main.storyboard in Resources */,
@@ -147,12 +183,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24B3C137CA044A79FB11D8D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		320F4BD9075D8A6FFD00341A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3WaysViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		596993B025AFB36F004F2EDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				596993CF25AFBE01004F2EDC /* SoryboardTableViewCell.swift in Sources */,
+				596993D125B4FAF4004F2EDC /* Manager.swift in Sources */,
+				596993D625B60BD5004F2EDC /* XibViewController.swift in Sources */,
 				596993CC25AFB537004F2EDC /* SoryboardViewController.swift in Sources */,
 				596993BC25AFB36F004F2EDC /* ViewController.swift in Sources */,
 				596993B825AFB36F004F2EDC /* AppDelegate.swift in Sources */,
@@ -298,6 +378,7 @@
 		};
 		596993C925AFB371004F2EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDC061124B00D11E5956E89E /* Pods-3WaysViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +397,7 @@
 		};
 		596993CA25AFB371004F2EDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 891EDA3EEBF8A407492E2BA3 /* Pods-3WaysViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

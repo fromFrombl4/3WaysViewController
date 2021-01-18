@@ -1,0 +1,6 @@
+framework module Pods_3WaysViewController {
+  umbrella header "Pods-3WaysViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

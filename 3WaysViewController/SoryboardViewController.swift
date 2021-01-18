@@ -8,20 +8,22 @@
 
 import UIKit
 
+protocol SoryboardViewControllerDelegate: AnyObject {
+    func changeLabel()
+}
+
 class SoryboardViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var meButton: UIButton!
+    
+    weak var delegate: SoryboardViewControllerDelegate?
     
     var array = [
         1,
         2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
+        3
     ]
     
     override func viewDidLoad() {
@@ -31,9 +33,8 @@ class SoryboardViewController: UIViewController {
     }
     @IBAction func pressedMeButton(_ sender: UIButton) {
         
-        guard let lastValue = array.last else {return}
-        array.append(lastValue + 1)
-        
+        self.delegate?.changeLabel()
+        self.textField.text = UserDefaults.standard.object(forKey: "textField") as? String
         tableView.reloadData()
     }
     
@@ -63,5 +64,24 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension SoryboardViewController: UITextFieldDelegate {
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+    
+    
+}
+extension SoryboardViewController: ViewControllerDelegate {
+    func changeLabel() {
+        self.myLabel.text = UserDefaults.standard.string(forKey: "textField")
     }
 }

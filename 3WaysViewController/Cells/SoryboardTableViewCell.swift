@@ -8,18 +8,12 @@
 
 import UIKit
 
-protocol SoryboardTableViewCellDelegate: AnyObject {
-    func changeLabel()
-}
-
 class SoryboardTableViewCell: UITableViewCell {
     @IBOutlet weak var soryboardLabel: UILabel!
     @IBOutlet weak var soryboardButton: UIButton!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var cellImageView: UIImageView!
     
-    
-    
-    weak var delegate: SoryboardTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +29,9 @@ class SoryboardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func pressedSoryboardButton(_ sender: UIButton) {
-        self.delegate?.changeLabel()
-        self.textField.text = UserDefaults.standard.object(forKey: "textField") as? String
-        
+            Manager.shared.getImage(endPoint: "photos")
+        //app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250
+        //
     }
     
 }
