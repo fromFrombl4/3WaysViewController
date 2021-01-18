@@ -11,7 +11,6 @@ import UIKit
 class SoryboardTableViewCell: UITableViewCell {
     @IBOutlet weak var soryboardLabel: UILabel!
     @IBOutlet weak var soryboardButton: UIButton!
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var cellImageView: UIImageView!
     
     
@@ -31,7 +30,7 @@ class SoryboardTableViewCell: UITableViewCell {
     @IBAction func pressedSoryboardButton(_ sender: UIButton) {
             Manager.shared.getImage(endPoint: "photos")
         //app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250
-        //
+        //photos
     }
     
 }

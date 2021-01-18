@@ -17,6 +17,7 @@ class SoryboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var meButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
     
     weak var delegate: SoryboardViewControllerDelegate?
     
@@ -54,8 +55,7 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: array[indexPath.row])
         return cell
     }
-    
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
@@ -82,6 +82,6 @@ extension SoryboardViewController: UITextFieldDelegate {
 }
 extension SoryboardViewController: ViewControllerDelegate {
     func changeLabel() {
-        self.myLabel.text = UserDefaults.standard.string(forKey: "textField")
+        self.myLabel.text = "storyboard VC"
     }
 }

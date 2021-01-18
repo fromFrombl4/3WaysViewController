@@ -47,6 +47,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoE-LY-IYP">
                                 <rect key="frame" x="50" y="290.5" width="314" height="30"/>
                                 <state key="normal" title="XIB"/>
+                                <connections>
+                                    <action selector="pressedXibButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LxB-0c-4B8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-Ui-9ev">
                                 <rect key="frame" x="50" y="370.5" width="314" height="30"/>
@@ -181,6 +184,7 @@
                     </view>
                     <connections>
                         <outlet property="meButton" destination="Xmu-FF-JtU" id="ubc-Vx-af8"/>
+                        <outlet property="myLabel" destination="WZB-kA-9hl" id="3rI-Cb-ctv"/>
                         <outlet property="tableView" destination="stY-IK-uSU" id="NkV-vc-Pr0"/>
                         <outlet property="textField" destination="Pgl-2x-kVO" id="yPX-yz-jBA"/>
                     </connections>

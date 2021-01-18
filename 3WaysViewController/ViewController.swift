@@ -31,11 +31,19 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @IBAction func pressedXibButton(_ sender: UIButton) {
+        
+        let vc = XibViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
 
 }
 
 extension ViewController: SoryboardViewControllerDelegate {
     func changeLabel() {
-        self.myLabel.text = UserDefaults.standard.string(forKey: "textField")
+        self.myLabel.text = "back from storyboard"
     }
 }
