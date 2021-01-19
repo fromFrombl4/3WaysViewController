@@ -21,17 +21,19 @@ class ViewController: UIViewController {
         self.delegate?.changeLabel()
     }
     @IBAction func pressedStoryboardButton(_ sender: UIButton) {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SoryboardViewController") as? SoryboardViewController else {
+        guard let controller = storyboard?
+        .instantiateViewController(withIdentifier: "SoryboardViewController")
+        as? SoryboardViewController else {
             return
         }
         self.navigationController?.pushViewController(controller, animated: true)
     }
     @IBAction func pressedXibButton(_ sender: UIButton) {
-        let vc = XibViewController(nibName: "XibViewController", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        let controller = XibViewController(nibName: "XibViewController", bundle: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
 
     }
-    @IBAction func pressedCodeButton(_ sender: UIButton){
+    @IBAction func pressedCodeButton(_ sender: UIButton) {
         let codeController = CodeViewController()
         self.navigationController?.pushViewController(codeController, animated: true)
     }

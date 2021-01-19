@@ -12,7 +12,6 @@ class XibViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     var array = [
         1,
@@ -27,7 +26,9 @@ extension XibViewController: UITableViewDelegate, UITableViewDataSource {
         return array.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SoryboardTableViewCell") as? SoryboardTableViewCell else {
+        guard let cell = tableView
+            .dequeueReusableCell(withIdentifier: "SoryboardTableViewCell")
+            as? SoryboardTableViewCell else {
             return UITableViewCell()
         }
         cell.configure(with: array[indexPath.row])

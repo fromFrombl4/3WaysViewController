@@ -13,7 +13,6 @@ protocol SoryboardViewControllerDelegate: AnyObject {
 }
 
 class SoryboardViewController: UIViewController {
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var meButton: UIButton!
@@ -26,8 +25,6 @@ class SoryboardViewController: UIViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     @IBAction func pressedMeButton(_ sender: UIButton) {
         self.delegate?.changeLabel()
@@ -41,13 +38,14 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
         return array.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SoryboardTableViewCell") as? SoryboardTableViewCell else {
+        guard let cell = tableView
+            .dequeueReusableCell(withIdentifier: "SoryboardTableViewCell")
+            as? SoryboardTableViewCell else {
             return UITableViewCell()
         }
         cell.configure(with: array[indexPath.row])
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
