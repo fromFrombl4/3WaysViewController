@@ -21,14 +21,14 @@ class SoryboardTableViewCell: UITableViewCell {
     func configure(with text: Int) {
         self .soryboardLabel.text = "\(text)"
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     @IBAction func pressedSoryboardButton(_ sender: UIButton) {
-            Manager.shared.getImage(endPoint: "photos")
+        Manager.shared.getImage(endPoint: "photos")
         //app-icon-set-login-icon-comments-avatar-icon-PNG-free-PNG-Images_126250
         //photos
     }

@@ -54,6 +54,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CZ-Ui-9ev">
                                 <rect key="frame" x="50" y="370.5" width="314" height="30"/>
                                 <state key="normal" title="Code"/>
+                                <connections>
+                                    <action selector="pressedCodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elX-C5-4sv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -14,32 +14,27 @@ protocol ViewControllerDelegate: AnyObject {
 
 class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
-    
     weak var delegate: ViewController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.delegate?.changeLabel()
     }
-
     @IBAction func pressedStoryboardButton(_ sender: UIButton) {
-        
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "SoryboardViewController") as? SoryboardViewController else {
             return
         }
-        
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
     @IBAction func pressedXibButton(_ sender: UIButton) {
-        
-        let vc = XibViewController()
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    
+        let vc = XibViewController(nibName: "XibViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
 
+    }
+    @IBAction func pressedCodeButton(_ sender: UIButton){
+        let codeController = CodeViewController()
+        self.navigationController?.pushViewController(codeController, animated: true)
+    }
 }
 
 extension ViewController: SoryboardViewControllerDelegate {
