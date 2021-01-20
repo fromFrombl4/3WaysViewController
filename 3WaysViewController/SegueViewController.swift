@@ -1,22 +1,18 @@
-//
-//  XibViewController.swift
-//  3WaysViewController
-//
-//  Created by Roman Dod on 1/19/21.
-//  Copyright © 2021 Roman Dod. All rights reserved.
-//
-
 import UIKit
 
-class XibViewController: UIViewController {
+class SegueViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
+
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
+
     }
+
     var array = [
         1,
         2,
@@ -24,8 +20,7 @@ class XibViewController: UIViewController {
     ]
 
 }
-
-extension XibViewController: UITableViewDelegate, UITableViewDataSource {
+extension SegueViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -36,12 +31,4 @@ extension XibViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        self.navigationController?.popViewController(animated: true)
-    }
 }

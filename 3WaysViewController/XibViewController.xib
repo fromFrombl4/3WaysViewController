@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XibViewController" customModule="_WaysViewController" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="fO6-VN-B06" id="PQg-oB-Qlk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,22 +28,23 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fO6-VN-B06">
-                    <rect key="frame" x="0.0" y="184" width="414" height="608"/>
+                    <rect key="frame" x="0.0" y="194" width="414" height="668"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fO6-VN-B06" secondAttribute="bottom" id="4fx-gK-Hce"/>
                 <constraint firstItem="iYD-Zu-Ijn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="FDS-1Q-EAB"/>
                 <constraint firstItem="iYD-Zu-Ijn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="HEc-KY-KcV"/>
                 <constraint firstItem="fO6-VN-B06" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ic3-Q9-SVy"/>
-                <constraint firstItem="fO6-VN-B06" firstAttribute="top" secondItem="iYD-Zu-Ijn" secondAttribute="bottom" constant="40" id="MvL-yW-OYo"/>
+                <constraint firstItem="fO6-VN-B06" firstAttribute="top" secondItem="iYD-Zu-Ijn" secondAttribute="bottom" constant="50" id="Vod-I9-jKI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iYD-Zu-Ijn" secondAttribute="trailing" constant="50" id="mhA-Cq-WyM"/>
                 <constraint firstItem="fO6-VN-B06" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qsc-95-EEj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fO6-VN-B06" secondAttribute="bottom" constant="70" id="yZ5-OX-Sx3"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="115"/>
+            <point key="canvasLocation" x="23" y="27"/>
         </view>
     </objects>
 </document>

@@ -7,9 +7,11 @@ class Manager {
     fileprivate var baseUrl = "https://jsonplaceholder.typicode.com/"
     //https://jsonplaceholder.typicode.com/
     //https://toppng.com/
+
     init(baseUrl: String) {
         self.baseUrl = baseUrl
     }
+    
     func getImage(endPoint: String) {
     AF.request(self.baseUrl + endPoint,
                    method: .get,
