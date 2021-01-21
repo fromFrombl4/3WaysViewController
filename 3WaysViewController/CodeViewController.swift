@@ -12,10 +12,12 @@ class CodeViewController: UIViewController {
 
     private var tableView: UITableView!
     private var label: UILabel!
+    var safeArea: UILayoutGuide!
+
     var array = [
-        1,
-        2,
-        3
+        "1",
+        "2",
+        "3"
     ]
 
     private func configureLabel() {
@@ -24,22 +26,31 @@ class CodeViewController: UIViewController {
         label.center = CGPoint(x: 50, y: 50)
         label.textAlignment = .left
         view.addSubview(label)
+
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            label.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 
     private func configureTable() {
         let table = UITableView()
-        table.frame = CGRect(x: 0, y: 150, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
         view.addSubview(table)
         NSLayoutConstraint.activate([
             table.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            table.topAnchor.constraint(equalTo: view.topAnchor),
-            table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            table.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 50),
+            table.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        safeArea = view.layoutMarginsGuide
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -57,6 +68,7 @@ extension CodeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
+        cell.textLabel?.text = array[indexPath.row]
         return cell
     }
 
