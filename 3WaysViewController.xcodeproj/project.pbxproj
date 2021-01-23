@@ -20,7 +20,7 @@
 		596993DE25B651EB004F2EDC /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993DD25B651EB004F2EDC /* CodeViewController.swift */; };
 		596993E125B71E78004F2EDC /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993DF25B71E78004F2EDC /* XibViewController.swift */; };
 		596993E225B71E78004F2EDC /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596993E025B71E78004F2EDC /* XibViewController.xib */; };
-		596993E525B79E16004F2EDC /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596993E425B79E16004F2EDC /* CustomCell.xib */; };
+		596993E525B79E16004F2EDC /* SoryboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 596993E425B79E16004F2EDC /* SoryboardTableViewCell.xib */; };
 		596993E725B7A774004F2EDC /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596993E625B7A773004F2EDC /* SegueViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		596993DD25B651EB004F2EDC /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		596993DF25B71E78004F2EDC /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		596993E025B71E78004F2EDC /* XibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibViewController.xib; sourceTree = "<group>"; };
-		596993E425B79E16004F2EDC /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		596993E425B79E16004F2EDC /* SoryboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoryboardTableViewCell.xib; sourceTree = "<group>"; };
 		596993E625B7A773004F2EDC /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		891EDA3EEBF8A407492E2BA3 /* Pods-3WaysViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3WaysViewController.release.xcconfig"; path = "Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController.release.xcconfig"; sourceTree = "<group>"; };
 		CDC061124B00D11E5956E89E /* Pods-3WaysViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3WaysViewController.debug.xcconfig"; path = "Target Support Files/Pods-3WaysViewController/Pods-3WaysViewController.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				596993CB25AFB537004F2EDC /* SoryboardViewController.swift */,
 				596993DF25B71E78004F2EDC /* XibViewController.swift */,
 				596993E025B71E78004F2EDC /* XibViewController.xib */,
-				596993E425B79E16004F2EDC /* CustomCell.xib */,
+				596993E425B79E16004F2EDC /* SoryboardTableViewCell.xib */,
 				596993C025AFB371004F2EDC /* Assets.xcassets */,
 				596993C225AFB371004F2EDC /* LaunchScreen.storyboard */,
 				596993C525AFB371004F2EDC /* Info.plist */,
@@ -184,7 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				596993E525B79E16004F2EDC /* CustomCell.xib in Resources */,
+				596993E525B79E16004F2EDC /* SoryboardTableViewCell.xib in Resources */,
 				596993E225B71E78004F2EDC /* XibViewController.xib in Resources */,
 				596993C425AFB371004F2EDC /* LaunchScreen.storyboard in Resources */,
 				596993C125AFB371004F2EDC /* Assets.xcassets in Resources */,

@@ -12,52 +12,58 @@ class CodeViewController: UIViewController {
 
     private var tableView: UITableView!
     private var label: UILabel!
-    var safeArea: UILayoutGuide!
 
+    public var code: Code?
     var array = [
-        "1",
-        "2",
-        "3"
+        1,
+        2,
+        3
     ]
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        label.text = code?.label
+    }
+
     private func configureLabel() {
-        let label = UILabel()
-        label.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-        label.center = CGPoint(x: 50, y: 50)
+        label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
+        label.text = "Label"
         view.addSubview(label)
 
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            label.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            label.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50),
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            label.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
     private func configureTable() {
-        let table = UITableView()
+        tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableFooterView = UIView()
+        view.addSubview(tableView)
 
-        view.addSubview(table)
         NSLayoutConstraint.activate([
-            table.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            table.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 50),
-            table.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 50),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        safeArea = view.layoutMarginsGuide
-
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
 
         configureLabel()
         configureTable()
+
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "SoryboardTableViewCell", bundle: nil), forCellReuseIdentifier: "SoryboardTableViewCell")
     }
 
 }
@@ -67,9 +73,15 @@ extension CodeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
-        cell.textLabel?.text = array[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SoryboardTableViewCell", for: indexPath) as? SoryboardTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: array[indexPath.row])
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 
 }

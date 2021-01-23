@@ -13,6 +13,7 @@ class SoryboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var label: UILabel!
 
+    public var storyBoard: StoryBoard?
     var array = [
         1,
         2,
@@ -21,6 +22,10 @@ class SoryboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        label.text = storyBoard?.label
     }
 }
 
@@ -34,7 +39,7 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView
             .dequeueReusableCell(withIdentifier: "SoryboardTableViewCell")
             as? SoryboardTableViewCell else {
-            return UITableViewCell()
+                return UITableViewCell()
         }
         cell.configure(with: array[indexPath.row])
         return cell
@@ -47,5 +52,9 @@ extension SoryboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.popViewController(animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 }

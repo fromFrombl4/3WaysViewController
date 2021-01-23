@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XibViewController" customModule="_WaysViewController" customModuleProvider="target">
             <connections>
+                <outlet property="label" destination="iYD-Zu-Ijn" id="aVI-Pi-oaS"/>
                 <outlet property="tableView" destination="fO6-VN-B06" id="PQg-oB-Qlk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
